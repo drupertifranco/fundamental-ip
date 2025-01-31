@@ -1,0 +1,6 @@
+name: my-topology
+topology:
+  nodes:
+    router1:
+      kind: vr-netlab
+      image: vrnetlab/vr-xcon:latest
