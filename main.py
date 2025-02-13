@@ -1,7 +1,7 @@
 # API
 from fastapi import FastAPI, APIRouter, HTTPException
 from configuratio import collection
-from database.schemas import all_data
+from database.schemas import all_tasks
 from database.models import Todo
 
 # App 
@@ -13,7 +13,7 @@ router = APIRouter()
 @router.get("/")
 async def get_all_todos():
     data = collection.find( )
-    return all_data(data)
+    return all_tasks(data)
 
 @router.post("/")
 async def create_task(new_task :Todo):
